@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
     "build": "quasar build",
-    "start": "quasar serve dist/spa --history",
+    "start": "quasar serve dist/spa",
     "deploy": "vercel"
   },
   "dependencies": {
