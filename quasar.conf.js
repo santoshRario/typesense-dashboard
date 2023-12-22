@@ -57,6 +57,7 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       publicPath: process.env.PUBLIC_PATH ?? (process.env.NODE_ENV === 'development' ? '/' : '/typesense-dashboard'),
+      publicPath: process.env.PUBLIC_PATH ?? '/',
       // transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
