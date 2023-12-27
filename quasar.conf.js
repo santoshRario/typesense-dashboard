@@ -67,7 +67,6 @@ module.exports = configure(function (ctx) {
         TS_PROTOCOL: process.env.TS_PROTOCOL,
         G_AUTH_CLIENT_ID: process.env.G_AUTH_CLIENT_ID,
         G_AUTH_CLIENT_SECRET: process.env.G_AUTH_CLIENT_SECRET,
-        G_REDIRECT_BASE_URI: process.env.G_REDIRECT_BASE_URI,
       },
       // transpile: false,
 

@@ -70,7 +70,6 @@ export default defineComponent({
           .initCodeClient({
             client_id: process.env.G_AUTH_CLIENT_ID || '',
             scope: 'email profile openid',
-            redirect_uri: process.env.G_REDIRECT_BASE_URI || '',
             callback: response => {
               if (response.code) {
                 // console.log('response', response)
