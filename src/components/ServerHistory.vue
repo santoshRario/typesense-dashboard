@@ -12,31 +12,6 @@
       </q-item-section>
     </q-item>
     <q-separator v-if="$props.showLogout" />
-    <q-item
-      clickable
-      v-close-popup
-      @click="$store.commit('node/clearHistory')"
-    >
-      <q-item-section>Clear history</q-item-section>
-      <q-item-section avatar>
-        <q-icon name="sym_s_delete" />
-      </q-item-section>
-    </q-item>
-    <q-separator />
-    <q-item-label header v-if="loginHistory.length === 0">No History</q-item-label>
-    <q-item-label header v-if="loginHistory.length > 0">Server History</q-item-label>
-    <q-item
-      clickable
-      v-close-popup
-      v-for="(history, index) in loginHistory"
-      :key="index"
-      @click="loginWithHistory(history)"
-    >
-      <q-item-section
-        >{{ history.node.protocol }}://{{ history.node.host }}:{{
-          history.node.port
-        }}</q-item-section>
-    </q-item>
   </q-list>
 </template>
 
@@ -64,11 +39,6 @@ export default defineComponent({
   methods: {
     logout() {
         void this.$store.dispatch('node/logout');
-    },
-    loginWithHistory(history: NodeLoginDataInterface) {
-      // Force redirection used the MainLayout Menu
-      const forceHomeRedirect = this.$props.showLogout;
-      void this.$store.dispatch('node/login', {...history, forceHomeRedirect});
     },
   },
 });
