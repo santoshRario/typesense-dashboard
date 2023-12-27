@@ -10,10 +10,6 @@
             <p class="text-red">{{ error }}</p>
           </q-card-section>
 
-          <q-card-section>
-            <p class="text-red">Host: {{ process.env.TS_HOST }}</p>
-          </q-card-section>
-
           <q-card-actions class="q-px-md row">
             <q-btn
               unelevated
@@ -38,12 +34,12 @@ export default defineComponent({
   name: 'Login',
   data() {
     return {
-      apiKey: 'xyz',
+      apiKey: process.env.TS_APIKEY,
       node: {
         email: 's@gmail.com',
-        host: 'typesense.staging.rario.com',
-        port: '443',
-        protocol: 'https',
+        host: process.env.TS_HOST,
+        port: process.env.TS_PORT,
+        protocol: process.env.TS_PROTOCOL,
         path: '',
         tls: true,
       },
