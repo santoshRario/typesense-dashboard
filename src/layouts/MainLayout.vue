@@ -21,7 +21,7 @@
           dense
           no-caps
         >
-          {{ $store.state.node.loginData?.node.host }}
+          {{ $store.state.node.loginData?.node.email }}
           <q-icon right name="sym_s_switch_account" />
           <q-menu>
             <server-history v-bind:show-logout="true"></server-history>
