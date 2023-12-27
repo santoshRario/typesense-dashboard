@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
     "build": "quasar build",
     "start": "quasar serve ./dist/spa",
     "deploy": "vercel --prod"
@@ -32,6 +33,8 @@
     "vue-monaco": "1.2.2",
     "vue-router": "4.2.4",
     "vue-server-renderer": "2.7.14",
+    "vue-google-oauth2": "^1.5.10",
+    "vue3-google-login": "^2.0.25",
     "vuex": "4.1.0"
   },
   "devDependencies": {
