@@ -157,6 +157,7 @@ const actions: ActionTree<NodeStateInterface, StateInterface> = {
     void context.dispatch('connectionCheck');
   },
   logout(context) {
+    console.log('running logout', LocalStorage.getItem(STORAGE_KEY_LOGIN))
     LocalStorage.remove(STORAGE_KEY_LOGIN);
     context.commit('setIsConnected', false);
   },

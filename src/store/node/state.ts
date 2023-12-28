@@ -51,6 +51,7 @@ export const STORAGE_KEY_LOGIN = 'typesense-logindata';
 export const STORAGE_KEY_LOGIN_HISTORY = 'typesense-loginhistory';
 
 function state(): NodeStateInterface {
+  console.log('initial', LocalStorage.getItem(STORAGE_KEY_LOGIN))
   return {
     loginData: LocalStorage.getItem(STORAGE_KEY_LOGIN),
     loginHistory: LocalStorage.getItem(STORAGE_KEY_LOGIN_HISTORY) || [],

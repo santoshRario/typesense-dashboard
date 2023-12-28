@@ -11,6 +11,7 @@ const mutation: MutationTree<NodeStateInterface> & {$router?:Router} = {
     payload: { apiKey: string; node: CustomNodeConfiguration }
   ) {
     state.loginData = payload;
+    console.log('setting store login', payload)
     LocalStorage.set(STORAGE_KEY_LOGIN, payload)
   },
   setIsConnected(state: NodeStateInterface, status: boolean):void {
