@@ -38,6 +38,11 @@ export default route<StateInterface>(function ({ store }) {
   void store.dispatch('node/connectionCheck');
 
   Router.beforeEach(async (to, from, next) => {
+    console.group('running beforeeach route')
+    console.log('to', to)
+    console.log('from', from)
+    // console.log('next', next)
+    console.groupEnd()
     if (to.name !== 'Login' && !store.state.node.isConnected) {
       store.commit('node/setPreviousRoute', to);
       next({ name: 'Login' });

@@ -129,6 +129,7 @@ export default defineComponent({
       }
     },
     login() {
+      console.log('calling login in component')
       void this.$store.dispatch('node/login', {
         apiKey: this.apiKey,
         node: this.node,

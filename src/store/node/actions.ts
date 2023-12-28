@@ -152,6 +152,8 @@ const actions: ActionTree<NodeStateInterface, StateInterface> = {
       node,
       forceHomeRedirect = false
     } = loginData;
+    if(!apiKey || !node) return
+    console.log('calling login', loginData)
     context.commit('setForceRedirect', forceHomeRedirect);
     context.commit('setNodeData', { apiKey, node });
     void context.dispatch('connectionCheck');
